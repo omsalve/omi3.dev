@@ -1,0 +1,297 @@
+{
+    "asset": {
+        "version": "2.0",
+        "generator": "Open Asset Import Library (assimp v5.2.cf7d3637)"
+    },
+    "extensionsUsed": [
+        "KHR_materials_volume",
+        "FB_ngon_encoding"
+    ],
+    "accessors": [
+        {
+            "bufferView": 0,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 53280,
+            "type": "VEC3",
+            "max": [
+                0.6204729080200195,
+                0.2150137573480606,
+                0.9552562236785889
+            ],
+            "min": [
+                -0.6204506754875183,
+                -0.21501410007476808,
+                -0.8143841624259949
+            ]
+        },
+        {
+            "bufferView": 1,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 53280,
+            "type": "VEC3",
+            "max": [
+                1.0,
+                1.0,
+                1.0
+            ],
+            "min": [
+                -1.0,
+                -1.0,
+                -1.0
+            ]
+        },
+        {
+            "bufferView": 2,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 53280,
+            "type": "VEC2",
+            "max": [
+                0.0,
+                1.0
+            ],
+            "min": [
+                0.0,
+                1.0
+            ]
+        },
+        {
+            "bufferView": 3,
+            "byteOffset": 0,
+            "componentType": 5125,
+            "count": 53280,
+            "type": "SCALAR",
+            "max": [
+                53279
+            ],
+            "min": [
+                0
+            ]
+        },
+        {
+            "bufferView": 4,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 221184,
+            "type": "VEC3",
+            "max": [
+                0.7275838255882263,
+                0.7275838255882263,
+                -0.8022578358650208
+            ],
+            "min": [
+                -0.7275838851928711,
+                -0.7275838255882263,
+                -0.9554508328437805
+            ]
+        },
+        {
+            "bufferView": 5,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 221184,
+            "type": "VEC3",
+            "max": [
+                1.0,
+                1.0,
+                0.9998818039894104
+            ],
+            "min": [
+                -1.0,
+                -1.0,
+                -0.9998819231987
+            ]
+        },
+        {
+            "bufferView": 6,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 221184,
+            "type": "VEC2",
+            "max": [
+                1.0000001192092896,
+                1.0
+            ],
+            "min": [
+                -4.440892627896218e-16,
+                -1.1920928955078126e-7
+            ]
+        },
+        {
+            "bufferView": 7,
+            "byteOffset": 0,
+            "componentType": 5125,
+            "count": 221184,
+            "type": "SCALAR",
+            "max": [
+                221183
+            ],
+            "min": [
+                0
+            ]
+        }
+    ],
+    "buffers": [
+        {
+            "byteLength": 9880704,
+            "uri": "result.bin"
+        }
+    ],
+    "bufferViews": [
+        {
+            "buffer": 0,
+            "byteOffset": 0,
+            "byteLength": 639360,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteOffset": 639360,
+            "byteLength": 639360,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteOffset": 1278720,
+            "byteLength": 426240,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteOffset": 1704960,
+            "byteLength": 213120,
+            "target": 34963
+        },
+        {
+            "buffer": 0,
+            "byteOffset": 1918080,
+            "byteLength": 2654208,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteOffset": 4572288,
+            "byteLength": 2654208,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteOffset": 7226496,
+            "byteLength": 1769472,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteOffset": 8995968,
+            "byteLength": 884736,
+            "target": 34963
+        }
+    ],
+    "materials": [
+        {
+            "name": "Color - Red Pin",
+            "pbrMetallicRoughness": {
+                "baseColorFactor": [
+                    0.42869067192077639,
+                    0.01599622331559658,
+                    0.03954625129699707,
+                    1.0
+                ],
+                "metallicFactor": 0.0,
+                "roughnessFactor": 0.30000001192092898
+            }
+        },
+        {
+            "name": "Color - Red Ripple",
+            "pbrMetallicRoughness": {
+                "baseColorFactor": [
+                    0.7105926275253296,
+                    0.7216281294822693,
+                    0.7553313374519348,
+                    1.0
+                ],
+                "metallicFactor": 0.0,
+                "roughnessFactor": 0.30000001192092898
+            }
+        }
+    ],
+    "meshes": [
+        {
+            "name": "Plane.003",
+            "primitives": [
+                {
+                    "extensions": {
+                        "FB_ngon_encoding": {}
+                    },
+                    "mode": 4,
+                    "material": 0,
+                    "indices": 3,
+                    "attributes": {
+                        "POSITION": 0,
+                        "NORMAL": 1,
+                        "TEXCOORD_0": 2
+                    }
+                },
+                {
+                    "extensions": {
+                        "FB_ngon_encoding": {}
+                    },
+                    "mode": 4,
+                    "material": 1,
+                    "indices": 7,
+                    "attributes": {
+                        "POSITION": 4,
+                        "NORMAL": 5,
+                        "TEXCOORD_0": 6
+                    }
+                }
+            ]
+        }
+    ],
+    "nodes": [
+        {
+            "name": "RootNode",
+            "children": [
+                1
+            ]
+        },
+        {
+            "name": "Map-Pin",
+            "matrix": [
+                100.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                -0.000016292067812173629,
+                -100.0,
+                0.0,
+                0.0,
+                100.0,
+                -0.000016292067812173629,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "mesh": 0,
+            "extras": {
+                "UserProperties": "",
+                "IsNull": false,
+                "DefaultAttributeIndex": 0,
+                "InheritType": 1
+            }
+        }
+    ],
+    "scenes": [
+        {
+            "nodes": [
+                0
+            ]
+        }
+    ],
+    "scene": 0
+}
