@@ -1,10 +1,9 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { ArrowRight } from 'lucide-react';
+import { ArrowDown } from 'lucide-react';
 
-// Animation variants for Framer Motion.
-// This creates a staggered fade-in effect.
+// Animation variants for the main text content
 const fadeInAnimation = {
   initial: { opacity: 0, y: 20 },
   animate: (i) => ({
@@ -18,43 +17,50 @@ const fadeInAnimation = {
   }),
 };
 
+// Data for the scrolling pills
+const skills = [
+  'Web Developer',
+  'UX & UI Design',
+  'Unreal Dev',
+];
+
 export default function HeroSection() {
   return (
-    <section className="flex min-h-screen flex-col items-center justify-center text-center">
-      {/* Top Pills/Tags */}
-      <div className="flex gap-2">
+    <section className="relative flex min-h-screen flex-col items-center justify-center text-center">
+      {/* Scrolling Marquee Container */}
+      <div
+        className="relative w-full max-w-lg overflow-hidden"
+        style={{
+          maskImage: 'linear-gradient(to right, transparent, black 20%, black 80%, transparent)',
+          WebkitMaskImage: 'linear-gradient(to right, transparent, black 20%, black 80%, transparent)',
+        }}
+      >
         <motion.div
-          custom={0}
-          initial="initial"
-          animate="animate"
-          variants={fadeInAnimation}
-          className="rounded-full border border-neutral-warm/20 bg-surface px-3 py-1 text-xs text-neutral-medium"
+          className="flex gap-4"
+          animate={{
+            x: ['0%', '-100%'],
+            transition: {
+              ease: 'linear',
+              duration: 20,
+              repeat: Infinity,
+            },
+          }}
         >
-          Web Design
-        </motion.div>
-        <motion.div
-          custom={1}
-          initial="initial"
-          animate="animate"
-          variants={fadeInAnimation}
-          className="rounded-full border border-neutral-warm/20 bg-surface px-3 py-1 text-xs text-neutral-medium"
-        >
-          UX & UI design
-        </motion.div>
-        <motion.div
-          custom={2}
-          initial="initial"
-          animate="animate"
-          variants={fadeInAnimation}
-          className="hidden rounded-full border border-neutral-warm/20 bg-surface px-3 py-1 text-xs text-neutral-medium sm:block"
-        >
-          Next.js
+          {/* Render the skills twice for a seamless loop */}
+          {[...skills, ...skills].map((skill, index) => (
+            <div
+              key={index}
+              className="flex-shrink-0 rounded-full border border-neutral-warm/20 bg-surface px-4 py-1 text-sm text-neutral-medium"
+            >
+              {skill}
+            </div>
+          ))}
         </motion.div>
       </div>
 
       {/* Main Heading */}
       <motion.h1
-        custom={3}
+        custom={0} // Adjusted delay index
         initial="initial"
         animate="animate"
         variants={fadeInAnimation}
@@ -67,7 +73,7 @@ export default function HeroSection() {
 
       {/* Subheading */}
       <motion.p
-        custom={4}
+        custom={1} // Adjusted delay index
         initial="initial"
         animate="animate"
         variants={fadeInAnimation}
@@ -76,7 +82,29 @@ export default function HeroSection() {
         Mumbai-based digital storyteller for worldwide brands.
       </motion.p>
 
-    
+      {/* Bouncing Scroll Indicator */}
+      <motion.a
+        href="#projects"
+        aria-label="Scroll to next section"
+        custom={3} // Stagger its appearance after the button
+        initial="initial"
+        animate="animate"
+        variants={fadeInAnimation}
+        className="absolute bottom-10"
+      >
+        <motion.div
+          animate={{ y: [0, 8, 0] }}
+          transition={{
+            duration: 1.5,
+            repeat: Infinity,
+            repeatType: 'loop',
+            ease: 'easeInOut',
+          }}
+          className="text-neutral-medium"
+        >
+          <ArrowDown size={24} />
+        </motion.div>
+      </motion.a>
     </section>
   );
 }
